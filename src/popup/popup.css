@@ -1,0 +1,278 @@
+.popup-container {
+  padding: 20px;
+  background: #ffffff;
+  min-height: 500px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  color: #333;
+}
+
+.popup-header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.popup-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0366d6;
+}
+
+.popup-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #586069;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #586069;
+}
+
+.error-message {
+  background: #ffeaea;
+  border: 1px solid #d73a49;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 16px;
+  color: #d73a49;
+  font-size: 14px;
+}
+
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-area {
+  border: 2px dashed #d1d5da;
+  border-radius: 8px;
+  padding: 32px;
+  text-align: center;
+  width: 100%;
+  background: #fafbfc;
+  transition: border-color 0.2s;
+}
+
+.upload-area:hover {
+  border-color: #0366d6;
+}
+
+.upload-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.upload-area h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.upload-area p {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  color: #586069;
+  line-height: 1.4;
+}
+
+.upload-button {
+  background: #0366d6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.upload-button:hover {
+  background: #0256cc;
+}
+
+.upload-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.evaluation-summary {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.evaluation-summary h3 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #24292e;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-row.highlight {
+  background: #e6f3ff;
+  margin: 0 -8px;
+  padding: 8px;
+  border-radius: 4px;
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 500;
+  color: #586069;
+}
+
+.value {
+  font-weight: 600;
+  color: #24292e;
+}
+
+.credits-section,
+.courses-section {
+  margin-top: 16px;
+}
+
+.credits-section h4,
+.courses-section h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #24292e;
+}
+
+.courses-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.course-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e1e5e9;
+  gap: 8px;
+}
+
+.course-item:last-child {
+  border-bottom: none;
+}
+
+.course-item.more {
+  justify-content: center;
+  color: #586069;
+  font-style: italic;
+}
+
+.course-code {
+  font-weight: 600;
+  color: #0366d6;
+  min-width: 80px;
+  font-size: 13px;
+}
+
+.course-title {
+  flex: 1;
+  font-size: 13px;
+  color: #24292e;
+}
+
+.course-credits {
+  font-size: 12px;
+  color: #586069;
+  min-width: 30px;
+  text-align: right;
+}
+
+.actions {
+  background: #fafbfc;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.file-info {
+  margin-bottom: 12px;
+}
+
+.file-info small {
+  color: #586069;
+  font-size: 12px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button.secondary {
+  background: #f6f8fa;
+  border-color: #d1d5da;
+  color: #24292e;
+}
+
+.button.secondary:hover:not(:disabled) {
+  background: #e1e4e8;
+}
+
+.button.danger {
+  background: #d73a49;
+  color: white;
+}
+
+.button.danger:hover:not(:disabled) {
+  background: #cb2431;
+}
+
+.popup-footer {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e1e5e9;
+  text-align: center;
+}
+
+.popup-footer p {
+  margin: 0;
+  font-size: 12px;
+  color: #586069;
+}

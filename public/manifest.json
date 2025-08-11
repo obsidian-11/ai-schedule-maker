@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "GSU AI Schedule Maker",
+  "version": "1.0.0",
+  "description": "AI-powered class schedule assistant for Georgia State University students",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://registration.gosolar.gsu.edu/*",
+    "https://www.ratemyprofessors.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "GSU Schedule Assistant"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://registration.gosolar.gsu.edu/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["*.js", "*.css", "*.html", "pdf.worker.min.mjs"],
+      "matches": ["https://registration.gosolar.gsu.edu/*"]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+(()=>{"use strict";chrome.runtime.onInstalled.addListener(()=>{console.log("GSU Schedule Assistant installed")}),chrome.runtime.onMessage.addListener((e,s,n)=>{console.log("Background received message:",e),"PING"===e.type?n({status:"pong"}):console.log("Unknown message type:",e.type)})})();

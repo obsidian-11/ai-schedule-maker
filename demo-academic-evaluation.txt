@@ -1,0 +1,36 @@
+Creating a demo PDF for testing requires specialized tools. Instead, here's a sample text that represents what would be in a GSU academic evaluation PDF:
+
+===================================
+GEORGIA STATE UNIVERSITY
+ACADEMIC EVALUATION REPORT
+===================================
+
+Student Name: John Smith
+Student ID: 901234567
+Program: Bachelor of Science in Computer Science
+Current GPA: 3.45
+
+DEGREE REQUIREMENTS SUMMARY
+===================================
+Total Credits Required: 120
+Credits Completed: 87
+Credits Remaining: 33
+
+REQUIRED COURSES REMAINING
+===================================
+CS 4200 Software Engineering (3 credits)
+CS 4250 Computer Networks (3 credits) 
+CS 4260 Human Computer Interaction (3 credits)
+MATH 3020 Probability and Statistics (3 credits)
+ENGL 3020 Business Writing (3 credits)
+General Electives (18 credits)
+
+Expected Graduation: Spring 2025
+
+===================================
+
+To test the extension:
+1. Load the extension in Chrome (chrome://extensions/)
+2. Create a simple PDF with similar content using any PDF creator
+3. Upload through the extension popup
+4. Verify the parsing extracts student info and course requirements
