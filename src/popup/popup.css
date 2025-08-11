@@ -168,24 +168,6 @@
   overflow-y: auto;
 }
 
-.course-item {
-  display: flex;
-  align-items: center;
-  padding: 8px 0;
-  border-bottom: 1px solid #e1e5e9;
-  gap: 8px;
-}
-
-.course-item:last-child {
-  border-bottom: none;
-}
-
-.course-item.more {
-  justify-content: center;
-  color: #586069;
-  font-style: italic;
-}
-
 .course-code {
   font-weight: 600;
   color: #0366d6;
@@ -275,4 +257,27 @@
   margin: 0;
   font-size: 12px;
   color: #586069;
+}
+
+/* Course item styles - simple list */
+.course-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #e1e5e9;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.course-item:hover {
+  background: #f6f8fa;
+}
+
+.course-item:last-child {
+  border-bottom: none;
+}
+
+.course-category {
+  color: #586069;
+  font-size: 11px;
+  margin-left: auto;
 }

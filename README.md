@@ -40,11 +40,18 @@ src/
 
 ## Current Implementation Status
 
-✅ **Phase 1: MVP & Core Data Collection**
+✅ **Phase 1: MVP & Core Data Collection** 
 - Basic extension structure
-- PDF upload and parsing
-- Local data storage
+- **Real GSU PDF parsing** - Updated with actual GSU evaluation format
+- Local data storage  
 - React popup UI
+
+### GSU Parser Features
+- **Accurate Student Info**: Extracts name, ID, GPA from real GSU format
+- **Credit Tracking**: Parses "Credits required/applied" sections
+- **Smart Course Detection**: Finds required courses from "Still needed" sections
+- **Multiple Requirements**: Handles Major, Core Curriculum, and Electives
+- **Course Options**: Supports "CSC 4320 or 4330" type requirements
 
 🚧 **Phase 2: Preferences & Scheduling Logic** (Coming next)
 - User preference settings

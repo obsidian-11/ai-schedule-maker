@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AcademicEvaluation, StoredEvaluationData } from '../types';
+import { AcademicEvaluation, StoredEvaluationData, RequiredCourse } from '../types';
 import { StorageService } from '../utils/storage';
 import { PDFParser } from '../utils/pdfParser';
 import './popup.css';
@@ -111,23 +111,33 @@ const Popup: React.FC = () => {
         <div className="courses-section">
           <h4>Required Courses ({evaluation.requiredCourses.length})</h4>
           <div className="courses-list">
-            {evaluation.requiredCourses.slice(0, 5).map((course, index) => (
-              <div key={index} className="course-item">
-                <span className="course-code">{course.courseCode}</span>
-                <span className="course-title">{course.courseTitle}</span>
-                <span className="course-credits">{course.credits} cr</span>
-              </div>
-            ))}
-            {evaluation.requiredCourses.length > 5 && (
-              <div className="course-item more">
-                +{evaluation.requiredCourses.length - 5} more courses
-              </div>
-            )}
+            {renderCoursesList(evaluation.requiredCourses)}
           </div>
         </div>
       )}
     </div>
   );
+
+  const renderCoursesList = (courses: RequiredCourse[]) => {
+    // Sort courses by credits (higher first), then alphabetically by code
+    const sortedCourses = [...courses].sort((a, b) => {
+      if (a.credits !== b.credits) {
+        return b.credits - a.credits; // Higher credits first
+      }
+      return a.courseCode.localeCompare(b.courseCode);
+    });
+
+    return sortedCourses.map((course, index) => (
+      <div key={index} className="course-item">
+        <span className="course-code">{course.courseCode}</span>
+        <span className="course-title">{course.courseTitle}</span>
+        <span className="course-credits">{course.credits} cr</span>
+        {course.category && (
+          <span className="course-category">{course.category}</span>
+        )}
+      </div>
+    ));
+  };
 
   if (isLoading) {
     return (

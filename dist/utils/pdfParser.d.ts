@@ -6,15 +6,17 @@ export declare class PDFParser {
     static parseAcademicEvaluation(file: File): Promise<PDFParseResult>;
     /**
      * Parse extracted text to find academic evaluation data
-     * This method contains GSU-specific parsing logic
+     * This method contains GSU-specific parsing logic for real GSU evaluations
      */
     private static parseEvaluationText;
-    private static extractStudentName;
-    private static extractStudentId;
-    private static extractDegreeProgram;
-    private static extractGPA;
-    private static extractTotalCredits;
-    private static extractCompletedCredits;
-    private static extractRemainingCredits;
-    private static extractRequiredCourses;
+    private static extractGSUStudentName;
+    private static extractGSUStudentId;
+    private static extractGSUDegreeProgram;
+    private static extractGSUGPA;
+    private static extractGSUCreditInfo;
+    private static extractGSURequiredCourses;
+    private static extractCoursesFromSection;
+    private static getCourseCategory;
+    private static getGenericCourseTitle;
+    private static extractCoursesGeneral;
 }
